@@ -4,9 +4,10 @@
   "description": "[![Actions Status](https://github.com/Zhostt/frontend-project-12/workflows/hexlet-check/badge.svg)](https://github.com/Zhostt/frontend-project-12/actions)",
   "main": "src/index.jsx",
   "scripts": {
+    "build": "npm run build --prefix frontend",
+    "start": "start-server -s ./frontend/build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx start-server -s ./frontend/build",
-    "build": "npm run build --prefix frontend"
+    "postinstall": "cd frontend && npm ci"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   },
   "homepage": "https://github.com/Zhostt/frontend-project-12#readme",
   "dependencies": {
-    "@hexlet/chat-server": "^1.1.8"
+    "@hexlet/chat-server": "^1.1.8",
+    "formik": "^2.4.4",
+    "react-router-dom": "^6.15.0",
+    "yup": "^1.2.0"
   }
 }
